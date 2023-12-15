@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route('/createJira', methods=['POST'])
 def createJira():
     
+    
     url = "https://raghul-tech.atlassian.net/rest/api/3/issue"
 
     API_TOKEN="YOUR TOKEN"
@@ -57,7 +58,9 @@ def createJira():
         headers=headers,
         auth=auth
     )
+    
 
+    if output["body"] == "/jira" 
     return json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": "))
 
 if __name__ == '__main__':
