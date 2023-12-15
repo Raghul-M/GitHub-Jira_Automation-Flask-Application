@@ -11,7 +11,7 @@ def createJira():
     
     url = "https://raghul-tech.atlassian.net/rest/api/3/issue"
 
-    API_TOKEN=${{ secrets.JIRAAPI_TOKEN}}
+    API_TOKEN= os.environ.get('API-KEY')
 
     
     auth = HTTPBasicAuth("", API_TOKEN)
