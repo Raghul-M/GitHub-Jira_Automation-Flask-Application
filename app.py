@@ -5,6 +5,10 @@ import requests
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
 # Define a route that handles GET requests
 @app.route('/createJira', methods=['POST'])
 def createJira():
